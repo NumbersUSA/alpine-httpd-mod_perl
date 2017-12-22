@@ -2,7 +2,7 @@ FROM alpine:3.4
 
 ## Install perl
 ENV PERL_VERSION 5.14.1
-COPY perl/*.patch /usr/src/perl/
+COPY 5.14/perl/*.patch /usr/src/perl/
 RUN set -eux; \
     \	
         apk add  --no-cache  --virtual .perl-builddeps make@oldgcc build-base curl wget tar; \
